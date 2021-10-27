@@ -4,12 +4,12 @@ import { Button } from "../../components"
 const width = Dimensions.get("window").width
 const height = Dimensions.get("window").height
 
-const ChooseTodo = () => {
+const ChooseTodo = ({ navigation }) => {
   const presscnewAccount = () => {
-    console.log("bastıkbaba")
+    navigation.navigate("SignUpStack")
   }
   const pressLogin = () => {
-    console.log("loginbastık")
+    navigation.navigate("SignIn")
   }
   return (
     <View style={styles.container}>
@@ -29,12 +29,7 @@ const ChooseTodo = () => {
           backgroundColor="#0095F6"
           textColor="white"
         />
-        <Button
-          buttonText="Log In"
-          onPress={pressLogin}
-          backgroundColor="white"
-          textColor="#0095F6"
-        />
+        <Button buttonText="Log In" onPress={pressLogin} textColor="#0095F6" />
       </View>
     </View>
   )
