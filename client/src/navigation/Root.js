@@ -19,7 +19,7 @@ const RootStack = createStackNavigator()
 
 const Root = ({ navigation }) => {
   return (
-    <RootStack.Navigator>
+    <RootStack.Navigator initialRouteName="Tab">
       <RootStack.Screen
         name="ChooseTodo"
         component={ChooseTodo}
