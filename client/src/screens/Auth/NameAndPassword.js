@@ -8,7 +8,7 @@ import BouncyCheckbox from "react-native-bouncy-checkbox"
 
 const NameAndPassword = ({ navigation, route }) => {
   const email = route.params
-  const [name, setName] = useState("")
+  const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [checkboxState, setCheckboxState] = useState(false)
 
@@ -22,14 +22,14 @@ const NameAndPassword = ({ navigation, route }) => {
     >
       <View style={{ flex: 0.8 }}>
         <View style={{ alignItems: "center" }}>
-          <Text style={{ fontWeight: "bold" }}>NAME AND PASSWORD</Text>
+          <Text style={{ fontWeight: "bold" }}>USERNAME AND PASSWORD</Text>
         </View>
         <View style={{ alignItems: "center" }}>
           <View>
             <CustomTextInput
-              value={name}
-              placeholder="Full name"
-              onChangeText={(text) => setName(text)}
+              value={username}
+              placeholder="Username"
+              onChangeText={(text) => setUsername(text)}
             />
           </View>
           <View style={{ marginTop: -20 }}>
@@ -67,17 +67,21 @@ const NameAndPassword = ({ navigation, route }) => {
         </View>
         <View style={{ marginTop: 30 }}>
           <Button
-            backgroundColor={name && password ? "#0095F6" : "#B2DFFC"}
-            textColor={name && password ? "white" : "#C7E8FD"}
-            onPress={() => navigation.navigate("ConfirmationCode", email)}
+            backgroundColor={username && password ? "#0095F6" : "#B2DFFC"}
+            textColor={username && password ? "white" : "#C7E8FD"}
+            onPress={() =>
+              navigation.navigate("AddBirthday", email, username, password)
+            }
             buttonText="Continue and Sync Contacts"
-            opacity={name && password ? 0 : 1}
+            opacity={username && password ? 0 : 1}
           />
           <Button
-            textColor={name && password ? "#0095F6" : "#b2dffc"}
-            onPress={() => navigation.navigate("ConfirmationCode", email)}
+            textColor={username && password ? "#0095F6" : "#b2dffc"}
+            onPress={() =>
+              navigation.navigate("AddBirthday", email, username, password)
+            }
             buttonText="Continue Without Syncing Contacts"
-            opacity={name && password ? 0 : 1}
+            opacity={username && password ? 0 : 1}
           />
         </View>
       </View>

@@ -1222,11 +1222,6 @@
   dependencies:
     merge-options "^3.0.4"
 
-"@react-native-community/checkbox@^0.5.9":
-  version "0.5.9"
-  resolved "https://registry.yarnpkg.com/@react-native-community/checkbox/-/checkbox-0.5.9.tgz#73e1fa91b0cbb4d1eaaa75a57844435a51c22290"
-  integrity sha512-2y/MW8zwXgzRN6fApZbYov3xKkR4vyWSOPo69OWSfa5emTbtKpSl7BY9xlKgu2pzGlLg5EyE8yogp0U7vFk+sQ==
-
 "@react-native-community/cli-debugger-ui@^5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-5.0.1.tgz#6b1f3367b8e5211e899983065ea2e72c1901d75f"
@@ -4602,6 +4597,11 @@ react-native-codegen@^0.0.6:
     flow-parser "^0.121.0"
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
+
+react-native-date-picker@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-date-picker/-/react-native-date-picker-4.1.2.tgz#10360c3eca4b05617f6592d9246638fa4c2a82ae"
+  integrity sha512-9l4JPGEr9+l6Tmq2JyPm4jdkJCfdz6rz5fBpvtiFA7Wps33W4cMkwboYVZE/2GOaCxSpzWyZD+9jj2987qnjpQ==
 
 react-native-dynamic-vector-icons@^1.1.6:
   version "1.1.6"

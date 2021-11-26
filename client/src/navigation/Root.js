@@ -9,7 +9,11 @@ import {
   SignUp,
   ConfirmationCode,
   NameAndPassword,
+  AddBirthday,
+  CreateUsername,
 } from "../screens"
+
+import Tab from "./Tab"
 
 const RootStack = createStackNavigator()
 
@@ -36,6 +40,11 @@ const Root = ({ navigation }) => {
         component={SignIn}
         options={{ headerShown: false }}
       />
+      <RootStack.Screen
+        name="Tab"
+        component={Tab}
+        options={{ headerShown: false }}
+      />
     </RootStack.Navigator>
   )
 }
@@ -43,8 +52,12 @@ const Root = ({ navigation }) => {
 const _SignUpStack = createStackNavigator()
 const SignUpStack = () => {
   return (
-    <_SignUpStack.Navigator>
-      <_SignUpStack.Screen name="SignUp" component={SignUp} />
+    <_SignUpStack.Navigator initialRouteName="SignUp">
+      <_SignUpStack.Screen
+        name="SignUp"
+        component={SignUp}
+        options={{ headerShown: false }}
+      />
       <_SignUpStack.Screen
         name="ConfirmationCode"
         component={ConfirmationCode}
@@ -53,6 +66,11 @@ const SignUpStack = () => {
       <_SignUpStack.Screen
         name="NameAndPassword"
         component={NameAndPassword}
+        options={{ headerShown: false }}
+      />
+      <_SignUpStack.Screen
+        name="AddBirthday"
+        component={AddBirthday}
         options={{ headerShown: false }}
       />
     </_SignUpStack.Navigator>

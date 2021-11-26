@@ -5,6 +5,7 @@ import SignIn from "./Auth/SignIn"
 import SignUp from "./Auth/SignUp"
 import ConfirmationCode from "./Auth/ConfirmationCode"
 import NameAndPassword from "./Auth/NameAndPassword"
+import AddBirthday from "./Auth/AddBirthday"
 
 export {
   ChooseTodo,
@@ -14,4 +15,5 @@ export {
   SignIn,
   ConfirmationCode,
   NameAndPassword,
+  AddBirthday,
 }
