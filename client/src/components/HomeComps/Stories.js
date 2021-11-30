@@ -8,7 +8,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native"
-import { USERS } from "../dummyData/dummyData"
+import { USERS } from "../../dummyData/USERS"
 
 const Stories = () => {
   const renderItem = ({ item }) =>
@@ -43,7 +43,7 @@ export default Stories
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 55 + StatusBar.currentHeight,
+    marginTop: 60,
     flexDirection: "row",
   },
   storyContainer: {
@@ -51,9 +51,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   profilePic: {
-    width: 70,
-    height: 70,
-    borderRadius: 70,
+    width: 71,
+    height: 71,
+    borderRadius: 71,
     marginLeft: 10,
     borderWidth: 2,
     borderColor: "red",

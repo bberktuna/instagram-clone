@@ -6,7 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack"
 //import Icon from "react-native-vector-icons/Ionicons"
 
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native"
-import { Home, Search, Reels, Shop, Profile } from "../screens"
+import { Home, Search, Reels, Shop, Profile, Comments } from "../screens"
 
 const BottomTab = createBottomTabNavigator()
 
@@ -16,8 +16,8 @@ const Tab = () => (
     screenOptions={{ tabBarShowLabel: false, headerShown: false }}
   >
     <BottomTab.Screen
-      name="Home"
-      component={Home}
+      name="HomeStack"
+      component={HomeStack}
       options={{
         tabBarIcon: ({ focused }) => (
           <Image
@@ -29,39 +29,6 @@ const Tab = () => (
             style={styles.icon}
           />
         ),
-
-        // headerRight: ({}) => (
-        //   <View style={styles.homeHeaderRight}>
-        //     <TouchableOpacity>
-        //       <Image
-        //         source={require("../../assets/icons/homeHeader/plus-blank.png")}
-        //         style={styles.homeHeaderRightIcon}
-        //       />
-        //     </TouchableOpacity>
-
-        //     <TouchableOpacity>
-        //       <Image
-        //         source={require("../../assets/icons/homeHeader/heart-blank.png")}
-        //         style={styles.homeHeaderRightIcon}
-        //       />
-        //     </TouchableOpacity>
-
-        //     <TouchableOpacity>
-        //       <Image
-        //         source={require("../../assets/icons/homeHeader/messenger-blank.png")}
-        //         style={styles.homeHeaderRightIcon}
-        //       />
-        //     </TouchableOpacity>
-        //   </View>
-        // ),
-        // headerLeft: () => (
-        //   <TouchableOpacity>
-        //     <Image
-        //       source={require("../../assets/icons/homeHeader/instagram-logo.png")}
-        //       style={styles.instagramLogo}
-        //     />
-        //   </TouchableOpacity>
-        // ),
       }}
     />
     <BottomTab.Screen
@@ -134,7 +101,16 @@ const _ShopStack = createBottomTabNavigator()
 const HomeStack = () => {
   return (
     <_HomeStack.Navigator>
-      <_HomeStack.Screen name="Home" component={Home} />
+      <_HomeStack.Screen
+        name="Home"
+        component={Home}
+        options={{ headerShown: false }}
+      />
+      <_HomeStack.Screen
+        name="Comments"
+        component={Comments}
+        options={{ headerShown: false }}
+      />
     </_HomeStack.Navigator>
   )
 }

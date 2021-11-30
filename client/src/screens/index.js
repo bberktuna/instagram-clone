@@ -10,6 +10,7 @@ import Profile from "./Profile/Profile"
 import Shop from "./Shop/Shop"
 import Reels from "./Reels/Reels"
 import Search from "./Search/Search"
+import Comments from "./Home/Comments"
 
 export {
   ChooseTodo,
@@ -24,4 +25,5 @@ export {
   Shop,
   Reels,
   Search,
+  Comments,
 }

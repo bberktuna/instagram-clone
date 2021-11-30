@@ -5,6 +5,26 @@ export const USERS = [
     id: "user111",
     profilePicture: "https://picsum.photos/200/300",
     stories: ["https://picsum.photos/200/300"],
+    posts: [
+      {
+        postId: "1",
+        postImage: "https://picsum.photos/200/300",
+        postLikes: 313,
+        postText: "ahaha super bi gun",
+        comments: [
+          {
+            username: "user222",
+            commentText: "commenting for user111's postId1 by user222",
+            commentLikes: 27,
+          },
+          {
+            username: "user333",
+            commentText: "commenting for user111's postId1 by user333",
+            commentLikes: 127,
+          },
+        ],
+      },
+    ],
   },
   {
     username: "user222",
@@ -15,15 +35,35 @@ export const USERS = [
     stories: [
       "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
     ],
+    posts: [
+      {
+        postId: "2",
+        postImage: "https://picsum.photos/200/400",
+        postLikes: 0,
+        postText: "noliyor abi",
+        comments: [
+          {
+            username: "user444",
+            commentText: "commenting for user111's postId1 by user444",
+            commentLikes: 272,
+          },
+          {
+            username: "user555",
+            commentText: "commenting for user111's postId1 by user555",
+            commentLikes: 1,
+          },
+        ],
+      },
+    ],
   },
   {
     username: "user333",
     password: "user333",
     id: "user333",
-    id: "user333",
     profilePicture:
       "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
     stories: [],
+    posts: [],
   },
   {
     username: "user444",
@@ -35,6 +75,7 @@ export const USERS = [
     stories: [
       "https://images.unsplash.com/photo-1463320898484-cdee8141c787?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
     ],
+    posts: [],
   },
   {
     username: "user555",
@@ -45,6 +86,7 @@ export const USERS = [
     stories: [
       "https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80",
     ],
+    posts: [],
   },
   {
     username: "user666",
@@ -53,6 +95,7 @@ export const USERS = [
     profilePicture:
       "https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1305&q=80",
     stories: [],
+    posts: [],
   },
   {
     username: "user777",
@@ -61,6 +104,7 @@ export const USERS = [
     profilePicture:
       "https://images.unsplash.com/photo-1597305877032-0668b3c6413a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1664&q=80",
     stories: [],
+    posts: [],
   },
   {
     username: "user888",
@@ -71,6 +115,7 @@ export const USERS = [
     stories: [
       "https://images.unsplash.com/photo-1559628129-67cf63b72248?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80",
     ],
+    posts: [],
   },
   {
     username: "user999",
@@ -81,6 +126,7 @@ export const USERS = [
     stories: [
       "https://images.unsplash.com/photo-1579273168832-1c6639363dad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1653&q=80",
     ],
+    posts: [],
   },
   {
     username: "user101010",
@@ -91,6 +137,7 @@ export const USERS = [
     stories: [
       "https://images.unsplash.com/photo-1579273166674-bea9b40ba0f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1330&q=80",
     ],
+    posts: [],
   },
   {
     username: "user111111",
@@ -101,5 +148,6 @@ export const USERS = [
     stories: [
       "https://images.unsplash.com/photo-1579273166082-a8b7ed138d77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1326&q=80",
     ],
+    posts: [],
   },
 ]

@@ -21,6 +21,7 @@ const CustomHeader = ({
 }) => {
   return (
     <View style={styles.containerSize}>
+      <StatusBar backgroundColor="#F2F2F2" />
       <View style={{ justifyContent: "flex-start" }}>
         {label ? (
           <Text>{headerLeftLabel} </Text>
@@ -47,7 +48,6 @@ export default CustomHeader
 
 const styles = StyleSheet.create({
   containerSize: {
-    marginTop: StatusBar.currentHeight,
     position: "absolute",
     top: 0,
     left: 0,
@@ -55,6 +55,8 @@ const styles = StyleSheet.create({
     height: 55,
     flexDirection: "row",
     justifyContent: "space-between",
+    zIndex: 5,
+    backgroundColor: "#F2F2F2",
   },
   instaLogo: {
     height: 55,
@@ -64,6 +66,6 @@ const styles = StyleSheet.create({
   icons: {
     width: 27,
     height: 27,
-    marginHorizontal: 6,
+    marginHorizontal: 8,
   },
 })
