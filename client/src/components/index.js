@@ -6,6 +6,9 @@ import CustomHeader from "./CustomHeader"
 import Stories from "./HomeComps/Stories"
 import Posts from "./HomeComps/Posts"
 import Post from "./HomeComps/Post"
+import TopProfile from "./ProfileComps/TopProfile"
+import ProfilePosts from "./ProfileComps/ProfilePosts"
+import GradientPicture from "./GradientPicture"
 
 export {
   CustomTextInput,
@@ -16,4 +19,7 @@ export {
   Stories,
   Posts,
   Post,
+  TopProfile,
+  ProfilePosts,
+  GradientPicture,
 }

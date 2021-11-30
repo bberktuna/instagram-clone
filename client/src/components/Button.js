@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   View,
   Dimensions,
+  Image,
 } from "react-native"
 
 const width = Dimensions.get("window").width
@@ -18,6 +19,16 @@ const Button = ({
   onPress,
   buttonText,
   opacity,
+  width,
+  height,
+  borderRadius,
+  borderWidth,
+  borderColor,
+  isButtonText = true,
+  iconSource,
+  iconWidth,
+  iconHeight,
+  marginHorizontal,
 }) => {
   return (
     <View style={{ marginBottom: 10 }}>
@@ -25,22 +36,32 @@ const Button = ({
         activeOpacity={opacity}
         style={{
           backgroundColor: backgroundColor,
-          width: width * 0.9,
-          height: height * 0.065,
-          borderRadius: width / 100,
+          width: width,
+          height: height,
+          borderRadius: borderRadius,
           alignItems: "center",
           justifyContent: "center",
+          borderWidth: borderWidth,
+          borderColor: borderColor,
+          marginHorizontal: marginHorizontal,
         }}
         onPress={onPress}
       >
-        <Text
-          style={{
-            color: textColor,
-            fontWeight: "bold",
-          }}
-        >
-          {buttonText}
-        </Text>
+        {isButtonText ? (
+          <Text
+            style={{
+              color: textColor,
+              fontWeight: "bold",
+            }}
+          >
+            {buttonText}
+          </Text>
+        ) : (
+          <Image
+            source={iconSource}
+            style={{ width: iconWidth, height: iconHeight }}
+          />
+        )}
       </TouchableOpacity>
     </View>
   )

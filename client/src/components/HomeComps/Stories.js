@@ -7,18 +7,23 @@ import {
   FlatList,
   Image,
   TouchableOpacity,
+  ImageBackground,
 } from "react-native"
+import { GradientPicture } from ".."
 import { USERS } from "../../dummyData/USERS"
 
-const Stories = () => {
+const Stories = ({ marginTop }) => {
   const renderItem = ({ item }) =>
     item.stories[0] ? (
       <View style={styles.storyContainer}>
         <TouchableOpacity style={styles.touchable} onPress={openStory}>
-          <Image
-            source={{ uri: item.profilePicture }}
-            style={styles.profilePic}
+          <GradientPicture
+            profilePicture={item.profilePicture}
+            gradientSizes={75}
+            pictureSizes={71}
+            marginLeft={10}
           />
+
           <Text style={styles.usernameText}> {item.username} </Text>
         </TouchableOpacity>
       </View>
@@ -27,7 +32,7 @@ const Stories = () => {
     return
   }
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { marginTop: marginTop }]}>
       <FlatList
         data={USERS}
         renderItem={renderItem}
@@ -43,8 +48,8 @@ export default Stories
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 60,
     flexDirection: "row",
+    backgroundColor: "white",
   },
   storyContainer: {
     justifyContent: "center",
@@ -54,9 +59,10 @@ const styles = StyleSheet.create({
     width: 71,
     height: 71,
     borderRadius: 71,
-    marginLeft: 10,
-    borderWidth: 2,
-    borderColor: "red",
+    borderWidth: 3,
+    borderColor: "white",
+    marginTop: 2,
+    marginLeft: 2,
   },
   usernameText: {
     fontSize: 12,

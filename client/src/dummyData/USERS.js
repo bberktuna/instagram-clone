@@ -25,6 +25,10 @@ export const USERS = [
         ],
       },
     ],
+    followers: ["user222", "user333", "user444"],
+    following: ["user222", "user333", "user444"],
+    fullName: "berk",
+    profileBio: "zurna durum 31",
   },
   {
     username: "user222",

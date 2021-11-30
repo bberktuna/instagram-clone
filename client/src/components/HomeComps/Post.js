@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   usernameText: {
     fontWeight: "bold",
     marginLeft: 10,
-    alignSelf: "flex-start",
+    alignSelf: "center",
     fontSize: 13.5,
   },
   dotIcon: {

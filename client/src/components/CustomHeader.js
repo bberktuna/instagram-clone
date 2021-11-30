@@ -18,13 +18,17 @@ const CustomHeader = ({
   icon3,
   headerLeftLogo,
   label = true,
+  leftIcon1,
+  isLeftIcon1 = false,
 }) => {
   return (
     <View style={styles.containerSize}>
-      <StatusBar backgroundColor="#F2F2F2" />
-      <View style={{ justifyContent: "flex-start" }}>
+      <StatusBar backgroundColor="white" />
+      <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
+        {isLeftIcon1 ? <Image source={leftIcon1} style={styles.icons} /> : null}
+
         {label ? (
-          <Text>{headerLeftLabel} </Text>
+          <Text style={styles.labelText}>{headerLeftLabel} </Text>
         ) : (
           <Image source={headerLeftLogo} style={styles.instaLogo} />
         )}
@@ -55,8 +59,9 @@ const styles = StyleSheet.create({
     height: 55,
     flexDirection: "row",
     justifyContent: "space-between",
+    alignItems: "center",
     zIndex: 5,
-    backgroundColor: "#F2F2F2",
+    backgroundColor: "white",
   },
   instaLogo: {
     height: 55,
@@ -67,5 +72,11 @@ const styles = StyleSheet.create({
     width: 27,
     height: 27,
     marginHorizontal: 8,
+  },
+  labelText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginLeft: 15,
+    marginTop: -2,
   },
 })

@@ -1,10 +1,10 @@
 import React from "react"
-import { StyleSheet, Text, View } from "react-native"
+import { ListView, ScrollView, StyleSheet, Text, View } from "react-native"
 import { CustomHeader, Posts, Stories } from "../../components/index"
 
 const Home = () => {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "white" }}>
       <CustomHeader
         label={false}
         headerLeftLogo={require("../../../assets/icons/homeHeader/instagram-logo.png")}
@@ -12,7 +12,7 @@ const Home = () => {
         icon2={require("../../../assets/icons/homeHeader/heart-blank.png")}
         icon3={require("../../../assets/icons/homeHeader/messenger-blank.png")}
       />
-      <Stories />
+
       <Posts />
     </View>
   )

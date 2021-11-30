@@ -76,8 +76,8 @@ const Tab = () => (
       }}
     />
     <BottomTab.Screen
-      name="Profile"
-      component={Profile}
+      name="ProfileStack"
+      component={ProfileStack}
       options={{
         tabBarIcon: ({ focused }) => (
           <Image
@@ -142,7 +142,11 @@ const ShopStack = () => {
 const ProfileStack = () => {
   return (
     <_ProfileStack.Navigator>
-      <_ProfileStack.Screen name="Profile" component={Profile} />
+      <_ProfileStack.Screen
+        name="Profile"
+        component={Profile}
+        options={{ tabBarStyle: { display: "none" }, headerShown: false }}
+      />
     </_ProfileStack.Navigator>
   )
 }
