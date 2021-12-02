@@ -13,6 +13,22 @@ import { GradientPicture } from ".."
 import { USERS } from "../../dummyData/USERS"
 
 const Stories = ({ marginTop }) => {
+  const yourStory = () => {
+    return (
+      <TouchableOpacity>
+        <Image
+          source={require("../../../assets/empty-profile.jpg")}
+          style={styles.yourStory}
+        />
+        <Image
+          source={require("../../../assets/radius-plus-filled.png")}
+          style={styles.radiusPlus}
+        />
+
+        <Text style={styles.yourStoryText}>Your Story</Text>
+      </TouchableOpacity>
+    )
+  }
   const renderItem = ({ item }) =>
     item.stories[0] ? (
       <View style={styles.storyContainer}>
@@ -34,6 +50,7 @@ const Stories = ({ marginTop }) => {
   return (
     <View style={[styles.container, { marginTop: marginTop }]}>
       <FlatList
+        ListHeaderComponent={yourStory}
         data={USERS}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
@@ -72,5 +89,26 @@ const styles = StyleSheet.create({
   storyImage: {
     width: "100%",
     height: "100%",
+  },
+  yourStory: {
+    width: 75,
+    height: 75,
+    marginLeft: 15,
+  },
+  yourStoryText: {
+    justifyContent: "center",
+    alignSelf: "center",
+    alignItems: "center",
+    marginLeft: 15,
+    fontSize: 12,
+    marginTop: 3,
+  },
+  radiusPlus: {
+    tintColor: "#0095F6",
+    width: 20,
+    height: 20,
+    position: "absolute",
+    right: 5,
+    bottom: 20,
   },
 })

@@ -7,8 +7,8 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native"
-import { GradientPicture } from ".."
-import { Button } from "../../components/"
+import GradientPicture from "../GradientPicture"
+import Button from "../../components/Button"
 
 const TopProfile = ({
   flex,

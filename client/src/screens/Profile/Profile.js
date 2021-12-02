@@ -10,6 +10,7 @@ import { USERS } from "../../dummyData"
 
 const Profile = () => {
   console.log(USERS[0].posts.length)
+  console.log(USERS[0].posts[0].postImage)
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <CustomHeader
@@ -27,8 +28,9 @@ const Profile = () => {
         fullName={USERS[0].fullName}
         profileBio={USERS[0].profileBio}
       />
-      <Stories marginTop={20} />
-      <ProfilePosts flex={5} />
+      {USERS[0].stories[0] ? <Stories marginTop={20} /> : null}
+
+      <ProfilePosts flex={5} squareImage={USERS[0].posts[0].postImage} />
     </View>
   )
 }
