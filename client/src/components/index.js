@@ -9,7 +9,8 @@ import Post from "./HomeComps/Post"
 import TopProfile from "./ProfileComps/TopProfile"
 import ProfilePosts from "./ProfileComps/ProfilePosts"
 import GradientPicture from "./GradientPicture"
-
+import CommentsComponent from "./HomeComps/CommentsComponent"
+import CustomFooter from "./CustomFooter"
 export {
   CustomTextInput,
   Button,
@@ -22,4 +23,6 @@ export {
   TopProfile,
   ProfilePosts,
   GradientPicture,
+  CommentsComponent,
+  CustomFooter,
 }

@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   StatusBar,
   Image,
+  TouchableOpacity,
 } from "react-native"
 const width = Dimensions.get("window").width
 const height = Dimensions.get("window").height
@@ -20,12 +21,17 @@ const CustomHeader = ({
   label = true,
   leftIcon1,
   isLeftIcon1 = false,
+  leftIcon1OnPress,
 }) => {
   return (
     <View style={styles.containerSize}>
       <StatusBar backgroundColor="white" />
       <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
-        {isLeftIcon1 ? <Image source={leftIcon1} style={styles.icons} /> : null}
+        {isLeftIcon1 ? (
+          <TouchableOpacity onPress={leftIcon1OnPress}>
+            <Image source={leftIcon1} style={styles.icons} />
+          </TouchableOpacity>
+        ) : null}
 
         {label ? (
           <Text style={styles.labelText}>{headerLeftLabel} </Text>
@@ -74,7 +80,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
   },
   labelText: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "bold",
     marginLeft: 15,
     marginTop: -2,

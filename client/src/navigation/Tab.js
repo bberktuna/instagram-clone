@@ -109,7 +109,7 @@ const HomeStack = () => {
       <_HomeStack.Screen
         name="Comments"
         component={Comments}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, tabBarStyle: { display: "none" } }}
       />
     </_HomeStack.Navigator>
   )

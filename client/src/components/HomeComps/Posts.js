@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { Fragment, useState } from "react"
 import { StyleSheet, Text, View, StatusBar, FlatList } from "react-native"
 import Post from "./Post"
 import { USERS } from "../../dummyData"
@@ -19,6 +19,15 @@ const Posts = () => {
       </Fragment>
     ) : null
   }
+
+  const [isRefreshing, setIsRefreshing] = useState(false)
+  const _refresh = () => {
+    setIsRefreshing(false)
+  }
+  const onRefresh = () => {
+    setIsRefreshing(true)
+    _refresh()
+  }
   return (
     <View style={styles.container}>
       <FlatList
@@ -27,6 +36,8 @@ const Posts = () => {
         data={USERS}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
+        onRefresh={onRefresh}
+        refreshing={isRefreshing}
       />
     </View>
   )
