@@ -12,7 +12,7 @@ import {
 import { GradientPicture } from ".."
 import { USERS } from "../../dummyData/USERS"
 
-const Stories = ({ marginTop }) => {
+const Stories = ({ marginTop, borderBottomWidth }) => {
   const yourStory = () => {
     return (
       <TouchableOpacity>
@@ -48,7 +48,16 @@ const Stories = ({ marginTop }) => {
     return
   }
   return (
-    <View style={[styles.container, { marginTop: marginTop }]}>
+    <View
+      style={[
+        styles.container,
+        {
+          marginTop: marginTop,
+          borderBottomWidth: borderBottomWidth,
+          borderColor: "gray",
+        },
+      ]}
+    >
       <FlatList
         ListHeaderComponent={yourStory}
         data={USERS}
@@ -56,6 +65,7 @@ const Stories = ({ marginTop }) => {
         keyExtractor={(item) => item.id}
         horizontal
         showsHorizontalScrollIndicator={false}
+        style={{ marginBottom: 10 }}
       />
     </View>
   )

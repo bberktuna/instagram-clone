@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 import { USERS } from "../../dummyData/USERS"
 import { useNavigation } from "@react-navigation/native"
+import { GradientPicture } from ".."
 
 const Post = ({
   profilePicture,
@@ -13,11 +14,27 @@ const Post = ({
   commentNumber,
 }) => {
   const navigation = useNavigation()
+  const [isPostLiked, setIsPostLiked] = useState(false)
+  const [isBookmarked, setIsBookmarked] = useState(false)
+  const onPostLike = () => {
+    setIsPostLiked(isPostLiked ? false : true)
+  }
+  const onPressComments = () => {
+    navigation.navigate("Comments")
+  }
+  const onPressBookmarks = () => {
+    setIsBookmarked(isBookmarked ? false : true)
+  }
 
   return (
     <View style={styles.container}>
       <View style={styles.topView}>
-        <Image source={{ uri: profilePicture }} style={styles.profilePicture} />
+        <GradientPicture
+          profilePicture={profilePicture}
+          gradientSizes={38}
+          pictureSizes={34}
+          marginLeft={5}
+        />
         <Text style={styles.usernameText}> {username} </Text>
 
         <Image
@@ -31,22 +48,42 @@ const Post = ({
         ) : null}
       </View>
       <View style={styles.bottomView}>
-        <Image
-          source={require("../../../assets/icons/homeHeader/heart-blank.png")}
-          style={styles.bottomIcon}
-        />
-        <Image
-          source={require("../../../assets/icons/postIcons/bubble-blank.png")}
-          style={styles.bottomIcon}
-        />
+        <TouchableOpacity onPress={onPostLike}>
+          <Image
+            source={
+              isPostLiked
+                ? require("../../../assets/icons/homeHeader/heart-filled.png")
+                : require("../../../assets/icons/homeHeader/heart-blank.png")
+            }
+            style={[
+              styles.bottomIcon,
+              { tintColor: isPostLiked ? "#ED4855" : "black" },
+            ]}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={onPressComments}>
+          <Image
+            source={require("../../../assets/icons/postIcons/bubble-blank.png")}
+            style={styles.bottomIcon}
+          />
+        </TouchableOpacity>
         <Image
           source={require("../../../assets/icons/postIcons/send-blank.png")}
           style={styles.bottomIcon}
         />
-        <Image
-          source={require("../../../assets/icons/postIcons/bookmarks-blank.png")}
-          style={[styles.bottomIcon, { position: "absolute", right: 0 }]}
-        />
+        <TouchableOpacity
+          style={{ position: "absolute", right: 0 }}
+          onPress={onPressBookmarks}
+        >
+          <Image
+            source={
+              isBookmarked
+                ? require("../../../assets/icons/postIcons/bookmarks-filled.png")
+                : require("../../../assets/icons/postIcons/bookmarks-blank.png")
+            }
+            style={[styles.bottomIcon]}
+          />
+        </TouchableOpacity>
       </View>
       <View style={styles.extraView}>
         <TouchableOpacity>
@@ -76,18 +113,12 @@ const styles = StyleSheet.create({
     borderColor: "red",
     flex: 0.07,
     flexDirection: "row",
-    margin: 6,
+    margin: 8,
   },
 
-  profilePicture: {
-    width: 35,
-    height: 35,
-    borderRadius: 35,
-    alignSelf: "center",
-  },
   usernameText: {
     fontWeight: "bold",
-    marginLeft: 10,
+    marginLeft: 7,
     alignSelf: "center",
     fontSize: 13.5,
   },

@@ -48,7 +48,10 @@ const CommentsComponent = ({
                 ? require("../../../assets/icons/homeHeader/heart-filled.png")
                 : require("../../../assets/icons/homeHeader/heart-blank.png")
             }
-            style={[styles.heartIcon, { tintColor: isLiked ? "red" : "gray" }]}
+            style={[
+              styles.heartIcon,
+              { tintColor: isLiked ? "#ED4855" : "gray" },
+            ]}
           />
         </TouchableOpacity>
       </View>

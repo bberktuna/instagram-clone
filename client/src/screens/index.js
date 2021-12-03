@@ -11,6 +11,7 @@ import Shop from "./Shop/Shop"
 import Reels from "./Reels/Reels"
 import Search from "./Search/Search"
 import Comments from "./Home/Comments"
+import DetailedSearch from "./Search/DetailedSearch"
 
 export {
   ChooseTodo,
@@ -26,4 +27,5 @@ export {
   Reels,
   Search,
   Comments,
+  DetailedSearch,
 }

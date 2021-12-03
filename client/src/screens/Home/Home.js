@@ -12,7 +12,6 @@ const Home = () => {
         icon2={require("../../../assets/icons/homeHeader/heart-blank.png")}
         icon3={require("../../../assets/icons/homeHeader/messenger-blank.png")}
       />
-
       <Posts />
     </View>
   )

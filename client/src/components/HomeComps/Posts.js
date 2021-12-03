@@ -31,7 +31,7 @@ const Posts = () => {
   return (
     <View style={styles.container}>
       <FlatList
-        ListHeaderComponent={<Stories marginTop={60} />}
+        ListHeaderComponent={<Stories marginTop={60} borderBottomWidth={0.5} />}
         showsVerticalScrollIndicator={false}
         data={USERS}
         renderItem={renderItem}

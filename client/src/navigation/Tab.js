@@ -3,10 +3,17 @@ import React from "react"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { createStackNavigator } from "@react-navigation/stack"
 
-//import Icon from "react-native-vector-icons/Ionicons"
-
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native"
-import { Home, Search, Reels, Shop, Profile, Comments } from "../screens"
+import {
+  Home,
+  Search,
+  Reels,
+  Shop,
+  Profile,
+  Comments,
+  DetailedSearch,
+} from "../screens"
+import { OpenImage } from "../components"
 
 const BottomTab = createBottomTabNavigator()
 
@@ -32,8 +39,8 @@ const Tab = () => (
       }}
     />
     <BottomTab.Screen
-      name="Search"
-      component={Search}
+      name="SearchStack"
+      component={SearchStack}
       options={{
         tabBarIcon: ({ focused }) => (
           <Image
@@ -42,7 +49,7 @@ const Tab = () => (
                 ? require("../../assets/icons/tabBarIcons/search-filled.png")
                 : require("../../assets/icons/tabBarIcons/search-blank.png")
             }
-            style={styles.icon}
+            style={[styles.icon, { width: 30, height: 30 }]}
           />
         ),
       }}
@@ -51,10 +58,10 @@ const Tab = () => (
       name="Reels"
       component={Reels}
       options={{
-        tabBarIcon: () => (
+        tabBarIcon: ({ focused }) => (
           <Image
-            source={require("../../assets/icons/tabBarIcons/reels.png")}
-            style={styles.icon}
+            source={require("../../assets/icons/tabBarIcons/reels-filled.png")}
+            style={[styles.icon, { width: 23, height: 23 }]}
           />
         ),
       }}
@@ -70,7 +77,7 @@ const Tab = () => (
                 ? require("../../assets/icons/tabBarIcons/shop-filled.png")
                 : require("../../assets/icons/tabBarIcons/shop-blank.png")
             }
-            style={styles.icon}
+            style={[styles.icon]}
           />
         ),
       }}
@@ -81,8 +88,8 @@ const Tab = () => (
       options={{
         tabBarIcon: ({ focused }) => (
           <Image
-            source={require("../../assets/icons/user.png")}
-            style={styles.icon}
+            source={require("../../assets/empty-profile.jpg")}
+            style={focused ? styles.focusedProfile : styles.icon}
           />
         ),
       }}
@@ -118,7 +125,21 @@ const HomeStack = () => {
 const SearchStack = () => {
   return (
     <_SearchStack.Navigator>
-      <_SearchStack.Screen name="Search" component={Search} />
+      <_SearchStack.Screen
+        name="Search"
+        component={Search}
+        options={{ headerShown: false, tabBarStyle: { display: "none" } }}
+      />
+      <_SearchStack.Screen
+        name="DetailedSearch"
+        component={DetailedSearch}
+        options={{ headerShown: false, tabBarStyle: { display: "none" } }}
+      />
+      <_SearchStack.Screen
+        name="OpenImage"
+        component={OpenImage}
+        options={{ headerShown: false, tabBarStyle: { display: "none" } }}
+      />
     </_SearchStack.Navigator>
   )
 }
@@ -153,8 +174,8 @@ const ProfileStack = () => {
 
 const styles = StyleSheet.create({
   icon: {
-    width: 25,
-    height: 25,
+    width: 27,
+    height: 27,
   },
   homeHeaderRight: {
     flexDirection: "row",
@@ -168,5 +189,12 @@ const styles = StyleSheet.create({
     width: 27,
     resizeMode: "contain",
     height: 100,
+  },
+  focusedProfile: {
+    width: 27,
+    height: 27,
+    borderWidth: 2,
+    borderRadius: 26,
+    borderColor: "black",
   },
 })

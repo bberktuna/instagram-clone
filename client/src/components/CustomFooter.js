@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native"
-import { CustomTextInput, GradientPicture } from "."
 
 const CustomFooter = ({ footerPicture }) => {
   const [commentText, setCommentText] = useState("")

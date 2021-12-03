@@ -14,6 +14,16 @@ const PostsSlide = ({ squareImage }) => {
   const openImage = () => {
     return
   }
+
+  const [isRefreshing, setIsRefreshing] = useState(false)
+  const _refresh = () => {
+    setIsRefreshing(false)
+  }
+  const onRefresh = () => {
+    setIsRefreshing(true)
+    _refresh()
+  }
+
   const renderItem = ({ item }) => {
     return (
       <View>
@@ -31,6 +41,8 @@ const PostsSlide = ({ squareImage }) => {
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         numColumns={3}
+        onRefresh={onRefresh}
+        refreshing={isRefreshing}
       />
     </View>
   )

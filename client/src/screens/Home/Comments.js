@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { StyleSheet, Text, View, FlatList } from "react-native"
-import { CustomFooter, CustomHeader, GradientPicture } from "../../components"
+import { CustomFooter, CustomHeader } from "../../components"
 import { CommentsComponent } from "../../components/"
 import { USERS } from "../../dummyData"
 

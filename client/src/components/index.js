@@ -11,6 +11,9 @@ import ProfilePosts from "./ProfileComps/ProfilePosts"
 import GradientPicture from "./GradientPicture"
 import CommentsComponent from "./HomeComps/CommentsComponent"
 import CustomFooter from "./CustomFooter"
+import SearchBar from "./SearchComps/SearchBar"
+import OpenImage from "./OpenImage"
+
 export {
   CustomTextInput,
   Button,
@@ -25,4 +28,6 @@ export {
   GradientPicture,
   CommentsComponent,
   CustomFooter,
+  SearchBar,
+  OpenImage,
 }
