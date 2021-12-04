@@ -65,7 +65,7 @@ const ProfilePosts = ({ flex, squareImage }) => {
   }
 
   return (
-    <View style={{ flex: flex }}>
+    <View style={{ flex: flex, marginHorizontal: -1.5 }}>
       <View style={styles.topIcons}>
         <TouchableOpacity
           onPress={onPostsPress}
@@ -96,9 +96,9 @@ const ProfilePosts = ({ flex, squareImage }) => {
         </TouchableOpacity>
       </View>
       <View>
-        {postsFlat ? <PostsSlide squareImage={squareImage} /> : null}
-        {reelsFlat ? <ReelsSlide /> : null}
-        {taggedFlat ? <TaggedSlide /> : null}
+        {postsFlat && <PostsSlide squareImage={squareImage} />}
+        {reelsFlat && <ReelsSlide />}
+        {taggedFlat && <TaggedSlide />}
       </View>
     </View>
   )

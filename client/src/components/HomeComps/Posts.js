@@ -1,8 +1,7 @@
 import React, { Fragment, useState } from "react"
 import { StyleSheet, Text, View, StatusBar, FlatList } from "react-native"
-import Post from "./Post"
 import { USERS } from "../../dummyData"
-import Stories from "./Stories"
+import { Post, Stories } from "../../components"
 
 const Posts = () => {
   const renderItem = ({ item }) => {

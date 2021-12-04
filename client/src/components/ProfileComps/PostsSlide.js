@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {
   FlatList,
   Image,
@@ -26,7 +26,7 @@ const PostsSlide = ({ squareImage }) => {
 
   const renderItem = ({ item }) => {
     return (
-      <View>
+      <View style={{ margin: 1.5 }}>
         <TouchableOpacity onPress={openImage}>
           <Image source={{ uri: squareImage }} style={styles.userPosts} />
         </TouchableOpacity>

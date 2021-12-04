@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native"
-import { USERS } from "../../dummyData/USERS"
 import { useNavigation } from "@react-navigation/native"
 import { GradientPicture } from ".."
 

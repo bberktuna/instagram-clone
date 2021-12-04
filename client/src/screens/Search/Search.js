@@ -8,7 +8,7 @@ import {
   View,
 } from "react-native"
 import { FlatList } from "react-native-gesture-handler"
-import { OpenImage, SearchBar } from "../../components"
+import { OpenImage, PressableSearchBar } from "../../components"
 import { USERS } from "../../dummyData"
 import { useNavigation } from "@react-navigation/native"
 
@@ -17,7 +17,7 @@ const Search = () => {
 
   const renderItem = ({ item }) => {
     return (
-      <View>
+      <View style={styles.flatListStyle}>
         <TouchableOpacity onPress={openImage}>
           <Image
             source={{ uri: USERS[0].posts[0].postImage }}
@@ -40,9 +40,11 @@ const Search = () => {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={{ flex: 1, backgroundColor: "white", marginHorizontal: -1.5 }}>
       <FlatList
-        ListHeaderComponent={<SearchBar navigationScreen="DetailedSearch" />}
+        ListHeaderComponent={
+          <PressableSearchBar navigationScreen="DetailedSearch" />
+        }
         showsVerticalScrollIndicator={false}
         data={USERS}
         renderItem={renderItem}
@@ -64,5 +66,8 @@ const styles = StyleSheet.create({
   userPosts: {
     width: width / 3,
     height: height / 6,
+  },
+  flatListStyle: {
+    margin: 1.5,
   },
 })

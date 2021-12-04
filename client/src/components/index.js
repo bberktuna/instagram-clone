@@ -11,8 +11,15 @@ import ProfilePosts from "./ProfileComps/ProfilePosts"
 import GradientPicture from "./GradientPicture"
 import CommentsComponent from "./HomeComps/CommentsComponent"
 import CustomFooter from "./CustomFooter"
-import SearchBar from "./SearchComps/SearchBar"
+import PressableSearchBar from "./SearchComps/PressableSearchBar"
 import OpenImage from "./OpenImage"
+import SearchBar from "./SearchComps/SearchBar"
+import PlacesSlide from "./SearchComps/PlacesSlide"
+import TagsSlide from "./SearchComps/TagsSlide"
+import AccountsSlide from "./SearchComps/AccountsSlide"
+import TopSlide from "./SearchComps/TopSlide"
+import AudioSlide from "./SearchComps/AudioSlide"
+import SortUsers from "./SortUsers"
 
 export {
   CustomTextInput,
@@ -28,6 +35,13 @@ export {
   GradientPicture,
   CommentsComponent,
   CustomFooter,
-  SearchBar,
+  PressableSearchBar,
   OpenImage,
+  SearchBar,
+  PlacesSlide,
+  TagsSlide,
+  TopSlide,
+  AudioSlide,
+  AccountsSlide,
+  SortUsers,
 }
