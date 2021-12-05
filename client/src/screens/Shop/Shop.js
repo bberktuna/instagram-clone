@@ -37,22 +37,15 @@ const Shop = () => {
     )
   }
 
-  return (
-    <View style={styles.container}>
-      <CustomHeader
-        headerLeftLabel="Shop"
-        icon3={require("../../../assets/burgermenu.png")}
-        size3={26}
-        icon2={require("../../../assets/icons/postIcons/bookmarks-blank.png")}
-        size2={26}
-        marginHorizontal3={20}
-      />
-      <PressableSearchBar
-        navigationScreen="DetailedShop"
-        inputLabel="Search shops"
-        marginTop={55}
-      />
-      <View style={styles.scrollBar}>
+  const listHeader = () => {
+    return (
+      <View>
+        <PressableSearchBar
+          navigationScreen="DetailedShop"
+          inputLabel="Search shops"
+          marginTop={55}
+        />
+
         <ScrollView
           horizontal
           style={styles.scrollView}
@@ -88,6 +81,21 @@ const Shop = () => {
             </TouchableOpacity>
           </View>
         </ScrollView>
+      </View>
+    )
+  }
+  return (
+    <View style={styles.container}>
+      <CustomHeader
+        headerLeftLabel="Shop"
+        icon3={require("../../../assets/burgermenu.png")}
+        size3={26}
+        icon2={require("../../../assets/icons/postIcons/bookmarks-blank.png")}
+        size2={26}
+        marginHorizontal3={20}
+      />
+
+      <View style={styles.scrollBar}>
         <View
           style={{
             height: height,
@@ -96,6 +104,7 @@ const Shop = () => {
           }}
         >
           <FlatList
+            ListHeaderComponent={listHeader}
             showsVerticalScrollIndicator={false}
             data={USERS}
             renderItem={renderItem}
@@ -120,14 +129,11 @@ const styles = StyleSheet.create({
   },
   scrollView: {},
   scrollBar: {
-    height: 55,
     marginLeft: 15,
   },
   outOpacity: {
-    alignItems: "center",
-    justifyContent: "center",
-    marginHorizontal: 5,
-    marginTop: -5,
+    marginBottom: 10,
+    marginLeft: 15,
   },
   boxOpacity: {
     borderWidth: 0.5,
@@ -135,7 +141,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "white",
     width: "100%",
-    height: "80%",
+    height: 40,
     paddingHorizontal: 20,
     alignItems: "center",
     justifyContent: "center",
