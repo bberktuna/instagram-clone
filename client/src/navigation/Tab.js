@@ -20,7 +20,10 @@ const BottomTab = createBottomTabNavigator()
 const Tab = () => (
   <BottomTab.Navigator
     initialRouteName="Home"
-    screenOptions={{ tabBarShowLabel: false, headerShown: false }}
+    screenOptions={{
+      tabBarShowLabel: false,
+      headerShown: false,
+    }}
   >
     <BottomTab.Screen
       name="HomeStack"
@@ -77,7 +80,7 @@ const Tab = () => (
                 ? require("../../assets/icons/tabBarIcons/shop-filled.png")
                 : require("../../assets/icons/tabBarIcons/shop-blank.png")
             }
-            style={[styles.icon]}
+            style={styles.icon}
           />
         ),
       }}

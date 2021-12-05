@@ -1,5 +1,5 @@
 import React from "react"
-import { StyleSheet, Text, View } from "react-native"
+import { ScrollView, StyleSheet, Text, View } from "react-native"
 import {
   CustomHeader,
   ProfilePosts,
@@ -19,6 +19,7 @@ const Profile = () => {
         headerLeftLabel={USERS[0].username}
         icon3={require("../../../assets/icons/postIcons/menu-vertical.png")}
       />
+
       <TopProfile
         flex={3}
         profilePicture={USERS[0].profilePicture}
@@ -29,7 +30,6 @@ const Profile = () => {
         profileBio={USERS[0].profileBio}
       />
       {USERS[0].stories[0] ? <Stories marginTop={20} /> : null}
-
       <ProfilePosts flex={5} squareImage={USERS[0].posts[0].postImage} />
     </View>
   )

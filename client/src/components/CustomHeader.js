@@ -22,9 +22,10 @@ const CustomHeader = ({
   leftIcon1,
   isLeftIcon1 = false,
   leftIcon1OnPress,
+  backgroundColor = "white",
 }) => {
   return (
-    <View style={styles.containerSize}>
+    <View style={[styles.containerSize, { backgroundColor: backgroundColor }]}>
       <StatusBar backgroundColor="white" />
       <View style={{ justifyContent: "flex-start", flexDirection: "row" }}>
         {isLeftIcon1 ? (
@@ -67,7 +68,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     zIndex: 5,
-    backgroundColor: "white",
   },
   instaLogo: {
     height: 55,

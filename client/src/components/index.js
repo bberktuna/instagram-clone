@@ -20,6 +20,7 @@ import AccountsSlide from "./SearchComps/AccountsSlide"
 import TopSlide from "./SearchComps/TopSlide"
 import AudioSlide from "./SearchComps/AudioSlide"
 import SortUsers from "./SortUsers"
+import CustomIcon from "./CustomIcon"
 
 export {
   CustomTextInput,
@@ -44,4 +45,5 @@ export {
   AudioSlide,
   AccountsSlide,
   SortUsers,
+  CustomIcon,
 }

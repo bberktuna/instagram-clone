@@ -8,6 +8,7 @@ import {
   View,
   Dimensions,
 } from "react-native"
+import { Stories, TopProfile } from ".."
 import { USERS } from "../../dummyData"
 
 const PostsSlide = ({ squareImage }) => {
