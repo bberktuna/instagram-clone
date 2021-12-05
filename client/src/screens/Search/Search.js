@@ -43,7 +43,10 @@ const Search = () => {
     <View style={{ flex: 1, backgroundColor: "white", marginHorizontal: -1.5 }}>
       <FlatList
         ListHeaderComponent={
-          <PressableSearchBar navigationScreen="DetailedSearch" />
+          <PressableSearchBar
+            navigationScreen="DetailedSearch"
+            inputLabel="Search"
+          />
         }
         showsVerticalScrollIndicator={false}
         data={USERS}

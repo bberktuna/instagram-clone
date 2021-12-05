@@ -16,6 +16,7 @@ const Reels = () => {
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="black" />
+
       <ImageBackground
         source={require("../../../assets/reels.jpeg")}
         style={styles.reelsVideo}

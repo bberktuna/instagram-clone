@@ -69,7 +69,7 @@ const DetailedSearch = () => {
 
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
-      <SearchBar />
+      <SearchBar placeholder="Search" />
       <View style={styles.searchSlides}>
         <TouchableOpacity
           onPress={opTopSlide}

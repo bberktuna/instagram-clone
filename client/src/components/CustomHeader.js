@@ -9,6 +9,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native"
+import { CustomIcon } from "."
 const width = Dimensions.get("window").width
 const height = Dimensions.get("window").height
 
@@ -23,6 +24,15 @@ const CustomHeader = ({
   isLeftIcon1 = false,
   leftIcon1OnPress,
   backgroundColor = "white",
+  size1,
+  onPressIcon1,
+  size2,
+  onPressIcon2,
+  size3,
+  onPressIcon3,
+  marginHorizontal1,
+  marginHorizontal2,
+  marginHorizontal3,
 }) => {
   return (
     <View style={[styles.containerSize, { backgroundColor: backgroundColor }]}>
@@ -47,9 +57,24 @@ const CustomHeader = ({
           flexDirection: "row",
         }}
       >
-        <Image source={icon1} style={styles.icons} />
-        <Image source={icon2} style={styles.icons} />
-        <Image source={icon3} style={styles.icons} />
+        <CustomIcon
+          source={icon1}
+          size={size1}
+          onPressIcon={onPressIcon1}
+          marginHorizontal={marginHorizontal1}
+        />
+        <CustomIcon
+          source={icon2}
+          size={size2}
+          onPressIcon={onPressIcon2}
+          marginHorizontal={marginHorizontal2}
+        />
+        <CustomIcon
+          source={icon3}
+          size={size3}
+          onPressIcon={onPressIcon3}
+          marginHorizontal={marginHorizontal3}
+        />
       </View>
     </View>
   )
@@ -77,7 +102,7 @@ const styles = StyleSheet.create({
   icons: {
     width: 27,
     height: 27,
-    marginHorizontal: 8,
+    marginHorizontal: 10,
   },
   labelText: {
     fontSize: 22,

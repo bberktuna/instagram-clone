@@ -10,7 +10,7 @@ import {
 } from "react-native"
 import { useNavigation } from "@react-navigation/native"
 
-const SearchBar = ({ screen }) => {
+const SearchBar = ({ placeholder }) => {
   const [searchText, setSearchText] = useState("")
   const navigation = useNavigation()
 
@@ -27,7 +27,7 @@ const SearchBar = ({ screen }) => {
           />
         </TouchableOpacity>
         <TextInput
-          placeholder="Search"
+          placeholder={placeholder}
           placeholderTextColor="#999999"
           value={searchText}
           onChangeText={(text) => setSearchText(text)}

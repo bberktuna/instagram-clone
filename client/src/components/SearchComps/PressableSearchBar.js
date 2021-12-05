@@ -9,14 +9,14 @@ import {
 } from "react-native"
 import { useNavigation } from "@react-navigation/native"
 
-const PressableSearchBar = ({ navigationScreen }) => {
+const PressableSearchBar = ({ navigationScreen, inputLabel, marginTop }) => {
   const navigation = useNavigation()
 
   const searchOpacityPress = ({}) => {
     navigation.navigate(navigationScreen)
   }
   return (
-    <View style={styles.contianer}>
+    <View style={[styles.contianer, { marginTop: marginTop }]}>
       <TouchableOpacity
         onPress={searchOpacityPress}
         style={styles.searchOpacity}
@@ -26,7 +26,7 @@ const PressableSearchBar = ({ navigationScreen }) => {
             source={require("../../../assets/icons/tabBarIcons/search-filled.png")}
             style={styles.icon}
           />
-          <Text style={styles.opacityLabel}>Search</Text>
+          <Text style={styles.opacityLabel}> {inputLabel} </Text>
         </View>
       </TouchableOpacity>
     </View>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     height: 55,
   },
   searchOpacity: {
-    width: "90%",
+    width: "93%",
     backgroundColor: "#EFEFEF",
     borderRadius: 10,
     height: "70%",

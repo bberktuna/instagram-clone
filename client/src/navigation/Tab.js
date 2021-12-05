@@ -12,6 +12,7 @@ import {
   Profile,
   Comments,
   DetailedSearch,
+  DetailedShop,
 } from "../screens"
 import { OpenImage } from "../components"
 
@@ -70,8 +71,8 @@ const Tab = () => (
       }}
     />
     <BottomTab.Screen
-      name="Shop"
-      component={Shop}
+      name="ShopStack"
+      component={ShopStack}
       options={{
         tabBarIcon: ({ focused }) => (
           <Image
@@ -158,7 +159,16 @@ const ReelsStack = () => {
 const ShopStack = () => {
   return (
     <_ShopStack.Navigator>
-      <_ShopStack.Screen name="Shop" component={Shop} />
+      <_ShopStack.Screen
+        name="Shop"
+        component={Shop}
+        options={{ headerShown: false, tabBarStyle: { display: "none" } }}
+      />
+      <_ShopStack.Screen
+        name="DetailedShop"
+        component={DetailedShop}
+        options={{ headerShown: false, tabBarStyle: { display: "none" } }}
+      />
     </_ShopStack.Navigator>
   )
 }
