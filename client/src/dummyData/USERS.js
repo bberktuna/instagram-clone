@@ -4,59 +4,132 @@ export const USERS = [
     password: "user111",
     id: "user111",
     profilePicture: "https://picsum.photos/200/300",
-    stories: ["https://picsum.photos/200/300"],
+    stories: [
+      {
+        storyId: "1",
+        storyImage: "https://picsum.photos/200/300",
+      },
+    ],
     posts: [
       {
         postId: "1",
         postImage: "https://picsum.photos/200/300",
-        postLikes: 313,
+        postLikedBy: [
+          "user999",
+          "user777",
+          "user101010",
+          "user333",
+          "user222",
+          "user444",
+          "user666",
+          "user888",
+        ],
         postText: "ahaha super bi gun",
         comments: [
           {
             username: "user222",
             commentText: "commenting for user111's postId1 by user222",
-            commentLikes: 27,
+            commentLikedBy: ["user222", "user555"],
           },
           {
             username: "user333",
             commentText: "commenting for user111's postId1 by user333",
-            commentLikes: 127,
+            commentLikedBy: ["user999", "user777", "user101010", "user333"],
           },
         ],
+        postLikedBy: ["user222", "user333", "user666", "user888", "user111111"],
       },
     ],
     followers: ["user222", "user333", "user444"],
     following: ["user222", "user333", "user444"],
     fullName: "name",
     profileBio: "zurna durum 31",
+    reels: [
+      {
+        reelsId: "1",
+        reelsVideo: "https://picsum.photos/200/300",
+        reelsDescription: "this is reels descrp",
+        reelsLikes: 213,
+      },
+    ],
+    storyHistory: [
+      {
+        shId: "1",
+        shImage: "https://picsum.photos/200/300",
+      },
+    ],
   },
   {
     username: "user222",
     password: "user222",
     id: "user222",
     profilePicture:
-      "https://images.theconversation.com/files/319375/original/file-20200309-118956-1cqvm6j.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop",
+      "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
     stories: [
-      "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+      {
+        storyId: "1",
+        storyImage:
+          "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
+      },
     ],
     posts: [
       {
-        postId: "2",
-        postImage: "https://picsum.photos/200/400",
-        postLikes: 0,
-        postText: "noliyor abi",
+        postId: "1",
+        postImage:
+          "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
+        postLikedBy: [
+          "user999",
+          "user777",
+          "user101010",
+          "user333",
+          "user222",
+          "user444",
+          "user666",
+          "user888",
+        ],
+        postText: "das ist post text",
         comments: [
           {
-            username: "user444",
-            commentText: "commenting for user111's postId1 by user444",
-            commentLikes: 272,
+            username: "user222",
+            commentText:
+              "ANOTHER COMMENTTTTTTTTTcommenting for user111's postId1 by user222",
+            commentLikedBy: ["user222", "user555", "user666", "user999"],
           },
           {
-            username: "user555",
-            commentText: "commenting for user111's postId1 by user555",
-            commentLikes: 1,
+            username: "user333",
+            commentText:
+              "SECOND POST COMMENTTTTcommenting for user111's postId1 by user333",
+            commentLikedBy: [
+              "user999",
+              "user777",
+              "user101010",
+              "user333",
+              "user111111",
+              "user666",
+            ],
           },
         ],
+        postLikedBy: ["user222", "user333", "user666", "user888", "user111111"],
+      },
+    ],
+    followers: ["user222", "user333", "user444"],
+    following: ["user222", "user333", "user444"],
+    fullName: "name",
+    profileBio: "zurna durum 31",
+    reels: [
+      {
+        reelsId: "1",
+        reelsVideo:
+          "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
+        reelsDescription: "this is reels descrpv22222222222",
+        reelsLikes: 213,
+      },
+    ],
+    storyHistory: [
+      {
+        shId: "1",
+        shImage:
+          "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
       },
     ],
   },

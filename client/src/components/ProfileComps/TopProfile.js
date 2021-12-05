@@ -91,7 +91,7 @@ const height = Dimensions.get("window").height
 const styles = StyleSheet.create({
   container: {
     marginTop: 55,
-    height: 300,
+    height: 225,
     marginHorizontal: 15,
   },
   erste: {
