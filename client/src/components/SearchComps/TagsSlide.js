@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native"
 const TagsSlide = () => {
   return (
     <View>
-      <Text>tag</Text>
+      <Text></Text>
     </View>
   )
 }

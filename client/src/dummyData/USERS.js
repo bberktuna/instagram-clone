@@ -3,17 +3,20 @@ export const USERS = [
     username: "user111",
     password: "user111",
     id: "user111",
-    profilePicture: "https://picsum.photos/200/300",
+    profilePicture:
+      "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
     stories: [
       {
         storyId: "1",
-        storyImage: "https://picsum.photos/200/300",
+        storyImage:
+          "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
       },
     ],
     posts: [
       {
         postId: "1",
-        postImage: "https://picsum.photos/200/300",
+        postImage:
+          "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
         postLikedBy: [
           "user999",
           "user777",
@@ -47,7 +50,8 @@ export const USERS = [
     reels: [
       {
         reelsId: "1",
-        reelsVideo: "https://picsum.photos/200/300",
+        reelsVideo:
+          "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
         reelsDescription: "this is reels descrp",
         reelsLikes: 213,
       },
@@ -55,7 +59,8 @@ export const USERS = [
     storyHistory: [
       {
         shId: "1",
-        shImage: "https://picsum.photos/200/300",
+        shImage:
+          "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
       },
     ],
   },
@@ -64,19 +69,19 @@ export const USERS = [
     password: "user222",
     id: "user222",
     profilePicture:
-      "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
+      "https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1305&q=80",
     stories: [
       {
         storyId: "1",
         storyImage:
-          "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
+          "https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1305&q=80",
       },
     ],
     posts: [
       {
         postId: "1",
         postImage:
-          "https://images.unsplash.com/photo-1446071103084-c257b5f70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80",
+          "https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1305&q=80",
         postLikedBy: [
           "user999",
           "user777",

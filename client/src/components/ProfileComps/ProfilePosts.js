@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/core"
 import React, { useState } from "react"
 import {
   Dimensions,
@@ -12,6 +13,36 @@ import { Stories, TopProfile } from ".."
 import { USERS } from "../../dummyData"
 
 const ProfilePosts = ({ flex }) => {
+  const navigation = useNavigation()
+
+  const postsPress = () => {
+    return
+  }
+  const followersPress = () => {
+    navigation.navigate("Followers", {
+      username: USERS[0].username,
+      followingCount: USERS[0].following.length,
+      followersCount: USERS[0].followers.length,
+      followers: USERS[0].followers[0],
+      following: USERS[2].following,
+      profilePicture: USERS[0].profilePicture,
+      data: USERS,
+      fullName: USERS[0].fullName,
+    })
+  }
+  const followingPress = () => {
+    navigation.navigate("Followers", {
+      username: USERS[0].username,
+      followingCount: USERS[0].following.length,
+      followersCount: USERS[0].followers.length,
+      followers: USERS[0].followers,
+      following: USERS[0].following,
+      profilePicture: USERS[0].profilePicture,
+      data: USERS,
+      fullName: USERS[0].fullName,
+    })
+  }
+
   const [screen, setScreen] = useState({
     postsFlat: true,
     reelsFlat: false,
@@ -118,6 +149,9 @@ const ProfilePosts = ({ flex }) => {
                   following={USERS[0].following.length}
                   fullName={USERS[0].fullName}
                   profileBio={USERS[0].profileBio}
+                  postsPress={postsPress}
+                  followersPress={followersPress}
+                  followingPress={followingPress}
                 />
                 {USERS[0].storyHistory[0] ? <Stories marginTop={20} /> : null}
 
@@ -133,54 +167,8 @@ const ProfilePosts = ({ flex }) => {
             refreshing={isRefreshing}
           />
         )}
-        {reelsFlat && (
-          <FlatList
-            ListHeaderComponent={
-              <View>
-                <TopProfile
-                  profilePicture={USERS[0].profilePicture}
-                  totalPosts={USERS[0].posts.length}
-                  followers={USERS[0].followers.length}
-                  following={USERS[0].following.length}
-                  fullName={USERS[0].fullName}
-                  profileBio={USERS[0].profileBio}
-                />
-                <SlideIcons />
-              </View>
-            }
-            showsVerticalScrollIndicator={false}
-            data={USERS}
-            renderItem={renderItem}
-            keyExtractor={(item) => item.id}
-            numColumns={3}
-            onRefresh={onRefresh}
-            refreshing={isRefreshing}
-          />
-        )}
-        {taggedFlat && (
-          <FlatList
-            ListHeaderComponent={
-              <View>
-                <TopProfile
-                  profilePicture={USERS[0].profilePicture}
-                  totalPosts={USERS[0].posts.length}
-                  followers={USERS[0].followers.length}
-                  following={USERS[0].following.length}
-                  fullName={USERS[0].fullName}
-                  profileBio={USERS[0].profileBio}
-                />
-                <SlideIcons />
-              </View>
-            }
-            showsVerticalScrollIndicator={false}
-            data={USERS}
-            renderItem={renderItem}
-            keyExtractor={(item) => item.id}
-            numColumns={3}
-            onRefresh={onRefresh}
-            refreshing={isRefreshing}
-          />
-        )}
+        {reelsFlat && <View></View>}
+        {taggedFlat && <View></View>}
       </View>
     </View>
   )

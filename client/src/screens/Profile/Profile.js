@@ -8,7 +8,7 @@ import {
 } from "../../components"
 import { USERS } from "../../dummyData"
 
-const Profile = () => {
+const Profile = ({ navigation }) => {
   console.log(USERS[0].posts.length)
   console.log(USERS[0].posts[0].postImage)
 

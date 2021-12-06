@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native"
-import { GradientPicture } from "."
+import { Button, GradientPicture } from "."
 
 const SortUsers = ({
   ListHeaderComponent,
@@ -18,6 +18,14 @@ const SortUsers = ({
   icon = true,
   username,
   fullName,
+  buttonText,
+  backgroundColor,
+  textColor,
+  buttonWidth,
+  buttonHeight,
+  borderRadius,
+  size,
+  tintColor,
 }) => {
   const renderItem = ({ item }) => {
     return (
@@ -36,11 +44,36 @@ const SortUsers = ({
             </View>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.right}>
-          {button1 && <View></View>}
-          {button2 && <View></View>}
-          {icon && <Image source={icon} style={styles.icon} />}
-        </TouchableOpacity>
+        <View style={styles.right}>
+          <TouchableOpacity>
+            {button1 && (
+              <Button
+                buttonText={buttonText}
+                backgroundColor="white"
+                textColor="black"
+                width={buttonWidth}
+                height={28}
+                borderRadius={5}
+                borderWidth={0.5}
+                borderColor="gray"
+                marginHorizontal={10}
+              />
+            )}
+          </TouchableOpacity>
+          <TouchableOpacity>
+            {icon && (
+              <Image
+                source={icon}
+                style={{
+                  width: size,
+                  height: size,
+                  tintColor: tintColor,
+                  marginBottom: 10,
+                }}
+              />
+            )}
+          </TouchableOpacity>
+        </View>
       </View>
     )
   }
@@ -78,20 +111,17 @@ const styles = StyleSheet.create({
     marginVertical: 7,
   },
   left: {
-    flex: 9,
+    flex: 6,
     flexDirection: "row",
   },
 
   right: {
-    flex: 1,
-    justifyContent: "center",
+    flex: 4,
+    justifyContent: "flex-end",
     alignItems: "center",
+    flexDirection: "row",
   },
-  icon: {
-    width: 12,
-    height: 12,
-    tintColor: "#999999",
-  },
+  icon: {},
   usernameText: {
     fontWeight: "bold",
   },

@@ -13,6 +13,7 @@ import {
   Comments,
   DetailedSearch,
   DetailedShop,
+  Followers,
 } from "../screens"
 import { OpenImage } from "../components"
 
@@ -179,6 +180,11 @@ const ProfileStack = () => {
       <_ProfileStack.Screen
         name="Profile"
         component={Profile}
+        options={{ tabBarStyle: { display: "none" }, headerShown: false }}
+      />
+      <_ProfileStack.Screen
+        name="Followers"
+        component={Followers}
         options={{ tabBarStyle: { display: "none" }, headerShown: false }}
       />
     </_ProfileStack.Navigator>

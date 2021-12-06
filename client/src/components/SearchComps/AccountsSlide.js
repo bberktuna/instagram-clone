@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native"
 const AccountsSlide = () => {
   return (
     <View>
-      <Text>acccccccccccc</Text>
+      <Text></Text>
     </View>
   )
 }

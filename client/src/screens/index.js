@@ -13,6 +13,7 @@ import Search from "./Search/Search"
 import Comments from "./Home/Comments"
 import DetailedSearch from "./Search/DetailedSearch"
 import DetailedShop from "./Shop/DetailedShop"
+import Followers from "./Profile/Followers"
 
 export {
   ChooseTodo,
@@ -30,4 +31,5 @@ export {
   Comments,
   DetailedSearch,
   DetailedShop,
+  Followers,
 }
