@@ -16,6 +16,9 @@ const AddBirthday = ({ navigation, route }) => {
         onPress={() => navigation.navigate("Tab", email, username, password)}
         buttonText="Next"
         opacity={0}
+        width={350}
+        height={47}
+        borderRadius={5}
       />
     </View>
   )

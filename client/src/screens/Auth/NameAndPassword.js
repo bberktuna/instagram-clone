@@ -74,6 +74,9 @@ const NameAndPassword = ({ navigation, route }) => {
             }
             buttonText="Continue and Sync Contacts"
             opacity={username && password ? 0 : 1}
+            width={350}
+            height={47}
+            borderRadius={5}
           />
           <Button
             textColor={username && password ? "#0095F6" : "#b2dffc"}
@@ -82,6 +85,9 @@ const NameAndPassword = ({ navigation, route }) => {
             }
             buttonText="Continue Without Syncing Contacts"
             opacity={username && password ? 0 : 1}
+            width={350}
+            height={47}
+            borderRadius={5}
           />
         </View>
       </View>

@@ -32,6 +32,9 @@ const WithEmail = () => {
         onPress={() => navigation.navigate("ConfirmationCode", email)}
         buttonText="Next"
         opacity={email ? 0 : 1}
+        width={350}
+        height={47}
+        borderRadius={5}
       />
     </View>
   )

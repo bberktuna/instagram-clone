@@ -11,7 +11,7 @@ const Posts = () => {
           profilePicture={item.profilePicture}
           username={item.username}
           postImage={item?.posts[0]?.postImage}
-          postLikes={item?.posts[0]?.postLikes}
+          postLikes={item?.posts[0]?.postLikedBy[0]?.length}
           postText={item?.posts[0]?.postText}
           commentNumber={item?.posts[0]?.comments?.length}
         />

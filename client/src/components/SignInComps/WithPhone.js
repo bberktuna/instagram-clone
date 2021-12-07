@@ -39,6 +39,9 @@ const WithPhone = ({ navigation }) => {
         onPress={console.log("bastım")}
         buttonText="Next"
         opacity={phone ? 0 : 1}
+        width={350}
+        height={47}
+        borderRadius={5}
       />
     </View>
   )

@@ -54,6 +54,9 @@ const ConfirmationCode = ({ navigation, route }) => {
         onPress={() => navigation.navigate("NameAndPassword", email)}
         buttonText="Next"
         opacity={code ? 0 : 1}
+        width={350}
+        height={47}
+        borderRadius={5}
       />
     </SafeAreaView>
   )

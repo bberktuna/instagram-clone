@@ -28,8 +28,18 @@ const ChooseTodo = ({ navigation }) => {
           onPress={presscnewAccount}
           backgroundColor="#0095F6"
           textColor="white"
+          width={350}
+          height={47}
+          borderRadius={5}
         />
-        <Button buttonText="Log In" onPress={pressLogin} textColor="#0095F6" />
+        <Button
+          buttonText="Log In"
+          onPress={pressLogin}
+          textColor="#0095F6"
+          width={350}
+          height={47}
+          borderRadius={5}
+        />
       </View>
     </View>
   )

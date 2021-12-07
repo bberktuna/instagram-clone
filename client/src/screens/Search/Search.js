@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import {
   Dimensions,
   Image,
+  SafeAreaView,
+  StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -40,7 +42,14 @@ const Search = () => {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white", marginHorizontal: -1.5 }}>
+    <SafeAreaView
+      style={{
+        flex: 1,
+        backgroundColor: "white",
+        marginHorizontal: -1.5,
+        marginTop: 15,
+      }}
+    >
       <FlatList
         ListHeaderComponent={
           <PressableSearchBar
@@ -56,7 +65,7 @@ const Search = () => {
         onRefresh={onRefresh}
         refreshing={isRefreshing}
       />
-    </View>
+    </SafeAreaView>
   )
 }
 
