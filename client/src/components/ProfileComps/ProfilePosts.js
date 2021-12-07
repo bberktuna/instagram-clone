@@ -153,7 +153,9 @@ const ProfilePosts = ({ flex }) => {
                   followersPress={followersPress}
                   followingPress={followingPress}
                 />
-                {USERS[0].storyHistory[0] ? <Stories marginTop={20} /> : null}
+                {USERS[0].storyHistory[0] ? (
+                  <Stories showYourStory={false} marginTop={20} />
+                ) : null}
 
                 <SlideIcons />
               </>

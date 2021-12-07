@@ -47,7 +47,6 @@ const Search = () => {
         flex: 1,
         backgroundColor: "white",
         marginHorizontal: -1.5,
-        marginTop: 15,
       }}
     >
       <FlatList

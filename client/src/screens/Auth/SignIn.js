@@ -14,7 +14,7 @@ import { Button, CustomTextInput } from "../../components"
 const width = Dimensions.get("window").width
 const height = Dimensions.get("window").height
 
-const SignIn = () => {
+const SignIn = ({ navigation }) => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   return (
@@ -50,7 +50,7 @@ const SignIn = () => {
         <Button
           backgroundColor={username ? "#0095F6" : "#B2DFFC"}
           textColor={username ? "white" : "#C7E8FD"}
-          onPress={() => navigation.navigate("Tab", username)}
+          onPress={() => navigation.navigate("Tab", { username })}
           buttonText="Log in"
           opacity={username ? 0 : 1}
           width={350}
@@ -95,7 +95,7 @@ const SignIn = () => {
 
       <View style={styles.bottom}>
         <Text style={styles.forgot}>Don't have an account?</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("SignUpStack")}>
           <Text style={styles.getHelp}>Sign up.</Text>
         </TouchableOpacity>
       </View>

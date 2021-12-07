@@ -22,7 +22,9 @@ const NameAndPassword = ({ navigation, route }) => {
     >
       <View style={{ flex: 0.8 }}>
         <View style={{ alignItems: "center" }}>
-          <Text style={{ fontWeight: "bold" }}>USERNAME AND PASSWORD</Text>
+          <Text style={{ fontWeight: "bold", marginBottom: 30 }}>
+            USERNAME AND PASSWORD
+          </Text>
         </View>
         <View style={{ alignItems: "center" }}>
           <View>
@@ -30,6 +32,7 @@ const NameAndPassword = ({ navigation, route }) => {
               value={username}
               placeholder="Username"
               onChangeText={(text) => setUsername(text)}
+              marginBottom={30}
             />
           </View>
           <View style={{ marginTop: -20 }}>
@@ -37,6 +40,7 @@ const NameAndPassword = ({ navigation, route }) => {
               value={password}
               placeholder="Password"
               onChangeText={(text) => setPassword(text)}
+              marginBottom={15}
             />
           </View>
         </View>
@@ -70,7 +74,7 @@ const NameAndPassword = ({ navigation, route }) => {
             backgroundColor={username && password ? "#0095F6" : "#B2DFFC"}
             textColor={username && password ? "white" : "#C7E8FD"}
             onPress={() =>
-              navigation.navigate("AddBirthday", email, username, password)
+              navigation.navigate("Tab", email, username, password)
             }
             buttonText="Continue and Sync Contacts"
             opacity={username && password ? 0 : 1}
@@ -81,7 +85,7 @@ const NameAndPassword = ({ navigation, route }) => {
           <Button
             textColor={username && password ? "#0095F6" : "#b2dffc"}
             onPress={() =>
-              navigation.navigate("AddBirthday", email, username, password)
+              navigation.navigate("Tab", email, username, password)
             }
             buttonText="Continue Without Syncing Contacts"
             opacity={username && password ? 0 : 1}

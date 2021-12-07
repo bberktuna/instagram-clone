@@ -32,3 +32,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 })
+
+//00376B
